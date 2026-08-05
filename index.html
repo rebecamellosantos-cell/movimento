@@ -1,1 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física-Calc / Força-Energia-Potência</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones do GitHub (Octicons) via CDN -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <!-- Cabeçalho estilo GitHub -->
+    <header class="gh-header">
+        <div class="gh-nav-container">
+            <span class="mega-octicon octicon-mark-github"></span>
+            <nav class="gh-breadcrumb">
+                <a href="#" class="repo-owner">FísicaDev</a>
+                <span class="separator">/</span>
+                <a href="#" class="repo-name">calculadora-mecanica</a>
+            </nav>
+            <span class="badge-public">Public</span>
+        </div>
+    </header>
+
+    <!-- Container Principal -->
+    <main class="gh-container">
+        
+        <!-- Abas do Repositório -->
+        <div class="gh-tabs">
+            <div class="tab active">
+                <span class="octicon octicon-code"></span> Code
+            </div>
+            <div class="tab">
+                <span class="octicon octicon-issue-opened"></span> Issues <span class="counter">0</span>
+            </div>
+            <div class="tab">
+                <span class="octicon octicon-git-pull-request"></span> Pull requests <span class="counter">0</span>
+            </div>
+        </div>
+
+        <div class="gh-content-layout">
+            <!-- Coluna da Esquerda: Calculadora -->
+            <section class="main-content">
+                <div class="box-card">
+                    <div class="box-header">
+                        <span class="octicon octicon-terminal"></span> Parâmetros de Entrada
+                    </div>
+                    <div class="box-body">
+                        <div class="input-group">
+                            <label for="massa">Massa ($m$):</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="massa" placeholder="Ex: 70" min="0" step="any">
+                                <span class="unit">kg</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="distancia">Distância ($d$):</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="distancia" placeholder="Ex: 100" min="0" step="any">
+                                <span class="unit">m</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="tempo">Tempo ($t$):</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="tempo" placeholder="Ex: 10" min="0.001" step="any">
+                                <span class="unit">s</span>
+                            </div>
+                        </div>
+
+                        <button id="btn-calcular" class="btn-gh-primary">Executar Cálculos</button>
+                    </div>
+                </div>
+
+                <!-- Quadro de Resultados -->
+                <div class="box-card mt-20">
+                    <div class="box-header">
+                        <span class="octicon octicon-graph"></span> Console de Saída (Resultados)
+                    </div>
+                    <div class="box-body results-panel">
+                        <div class="result-line">
+                            <span class="result-label">Aceleração ($a$):</span>
+                            <span id="res-aceleracao" class="result-value">--</span>
+                        </div>
+                        <div class="result-line">
+                            <span class="result-label">Força Resultante ($F$):</span>
+                            <span id="res-forca" class="result-value">--</span>
+                        </div>
+                        <div class="result-line">
+                            <span class="result-label">Trabalho / Energia ($W$):</span>
+                            <span id="res-energia" class="result-value">--</span>
+                        </div>
+                        <div class="result-line">
+                            <span class="result-label">Potência Mecânica ($P$):</span>
+                            <span id="res-potencia" class="result-value">--</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Coluna da Direita: README / Sobre -->
+            <aside class="sidebar">
+                <div class="box-card">
+                    <div class="box-header">Sobre o Projeto</div>
+                    <div class="box-body sidebar-info">
+                        <p>Simulador cinemático e dinâmico baseado em repouso inicial ($v_0 = 0$).</p>
+                        <hr>
+                        <h4>Fórmulas Utilizadas:</h4>
+                        <ul>
+                            <li>$a = \frac{2d}{t^2}$</li>
+                            <li>$F = m \cdot a$</li>
+                            <li>$W = F \cdot d$</li>
+                            <li>$P = \frac{W}{t}$</li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Rodapé estilo GitHub -->
+    <footer class="gh-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <span class="octicon octicon-mark-github footer-logo"></span>
+                <span>© 2026 GitHubFísica, Inc.</span>
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">Termos</a></li>
+                <li><a href="#">Privacidade</a></li>
+                <li><a href="#">Segurança</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Script integrado conforme solicitado (script.css renomeado internamente via tag ou referenciado) -->
+    <script src="script.js"></script>
+</body>
+</html>
 
