@@ -1,1 +1,57 @@
+:root{
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --accent:#0a66c2;
+  --muted:#666;
+  --maxw:1000px;
+  --radius:10px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
 
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:#222}
+.container{max-width:var(--maxw);margin:0 auto;padding:1rem}
+
+.site-header{background:linear-gradient(90deg,#fff,#f2f6fb);border-bottom:1px solid #e6eef8;position:sticky;top:0;z-index:20}
+.header-inner{display:flex;align-items:center;gap:1rem;justify-content:space-between}
+.logo{margin:0;font-size:1.25rem;color:var(--accent)}
+
+.main-nav{display:flex;gap:0.5rem}
+.main-nav a{padding:0.5rem 0.75rem;border-radius:6px;color:var(--accent);text-decoration:none}
+.main-nav a:hover{background:#eaf2ff}
+
+.menu-toggle{display:none;background:transparent;border:1px solid transparent;font-size:1.2rem;padding:0.4rem 0.6rem;border-radius:6px}
+
+.card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 1px 3px rgba(20,30,50,0.04);margin:1rem 0}
+.subsection{margin-top:1rem;padding-top:0.5rem;border-top:1px dashed #eef3fa}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.6rem;align-items:end}
+.form-grid .full{grid-column:1/-1}
+label{display:block;font-size:0.9rem;color:var(--muted);margin-bottom:0.25rem}
+input[type="text"], input[type="number"], select{width:100%;padding:0.5rem;border:1px solid #d9e6f6;border-radius:6px}
+button{background:var(--accent);color:#fff;border:none;padding:0.5rem 0.8rem;border-radius:6px;cursor:pointer}
+button:hover{opacity:0.95}
+.result{margin-top:0.5rem;color:#0b3b66;font-weight:600}
+
+.calc{max-width:360px}
+#calc-display{width:100%;padding:0.6rem;border-radius:6px;border:1px solid #d9e6f6;margin-bottom:0.5rem;height:2.6rem}
+.calc-buttons{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.calc-buttons button{padding:0.6rem;font-size:1rem}
+.note{font-size:0.85rem;color:var(--muted);margin-top:0.5rem}
+
+.vision-letter{font-size:64px;text-align:center;padding:1rem;border-radius:8px;border:1px dashed #e3eefc;margin:1rem 0}
+.test-card{background:#fbfdff;padding:1rem;border-radius:8px}
+
+.site-footer{margin-top:2rem;padding:1rem 0;border-top:1px solid #e7eef8}
+.footer-inner{display:flex;justify-content:center;color:var(--muted);font-size:0.95rem}
+
+/* Responsive */
+@media (max-width:700px){
+  .main-nav{display:none}
+  .menu-toggle{display:block}
+  .header-inner{gap:0.5rem}
+  .vision-letter{font-size:44px}
+}
+
+/* Small utilities */
+.hidden{display:none}
