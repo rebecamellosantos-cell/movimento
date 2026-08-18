@@ -1,1 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saúde e Mobilidade — Testes e Ferramentas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Saúde e Mobilidade</h1>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#mobilidade">Mobilidade</a>
+        <a href="#visao">Visão</a>
+        <a href="#audicao">Audição</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
 
+  <main class="container">
+    <section id="mobilidade" class="card">
+      <h2>Mobilidade</h2>
+      <p>Recursos sobre movimento uniforme, calculadora científica, fórmulas, condições de mobilidade e dicas de prevenção.</p>
+
+      <article class="subsection">
+        <h3>Movimento uniforme</h3>
+        <p>Movimento uniforme (MU): velocidade constante. Fórmula básica: distância = velocidade × tempo (s = v × t).</p>
+
+        <div class="form-grid">
+          <div>
+            <label for="mu-vel">Velocidade (m/s)</label>
+            <input id="mu-vel" type="number" step="any" placeholder="ex: 2.5" />
+          </div>
+          <div>
+            <label for="mu-tempo">Tempo (s)</label>
+            <input id="mu-tempo" type="number" step="any" placeholder="ex: 10" />
+          </div>
+          <div class="full">
+            <button id="mu-calc">Calcular distância</button>
+            <p id="mu-resultado" class="result"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="subsection">
+        <h3>Calculadora científica</h3>
+        <div class="calc">
+          <input id="calc-display" type="text" readonly />
+          <div class="calc-buttons">
+            <button data-value="7">7</button><button data-value="8">8</button><button data-value="9">9</button><button data-value="/">÷</button>
+            <button data-value="4">4</button><button data-value="5">5</button><button data-value="6">6</button><button data-value="*">×</button>
+            <button data-value="1">1</button><button data-value="2">2</button><button data-value="3">3</button><button data-value="-">−</button>
+            <button data-value="0">0</button><button data-value=".">.</button><button id="calc-eval">=</button><button data-value="+">+</button>
+
+            <button data-value="Math.sin(">sin</button><button data-value="Math.cos(">cos</button><button data-value="Math.tan(">tan</button><button data-value="Math.log(">ln</button>
+            <button data-value="Math.pow(">pow</button><button id="calc-clear">C</button><button data-value="(">(</button><button data-value=")">)</button>
+          </div>
+        </div>
+        <p class="note">Use funções como sin( ), cos( ), Math.pow(2,3) ou pressione pow e complete com parênteses. Todos os resultados em radianos para trigonometria.</p>
+      </article>
+
+      <article class="subsection">
+        <h3>Fórmulas úteis</h3>
+        <ul>
+          <li>Movimento uniforme: s = v × t</li>
+          <li>Velocidade média: vmed = Δs / Δt</li>
+          <li>Aceleração média: a = Δv / Δt</li>
+          <li>Movimento uniformemente variado (MUV): s = s0 + v0 t + 0.5 a t²</li>
+        </ul>
+      </article>
+
+      <article class="subsection">
+        <h3>Condições de mobilidade</h3>
+        <p>Exemplos: osteoartrite, artrite reumatoide, doenças neuromusculares, lesões traumáticas, queda de força muscular. Procure avaliação médica ou fisioterápica quando houver dor persistente, instabilidade ou perda de função.</p>
+      </article>
+
+      <article class="subsection">
+        <h3>Dicas e prevenção</h3>
+        <ul>
+          <li>Mantenha atividade física regular (exercícios de força e equilíbrio).</li>
+          <li>Alongamentos e aquecimento antes de atividades intensas.</li>
+          <li>Uso de calçados adequados e adaptações do ambiente para reduzir risco de quedas.</li>
+          <li>Procure avaliação profissional ao sentir dor crônica.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="visao" class="card">
+      <h2>Visão — Teste de acuidade simples</h2>
+      <p>Este é um teste rudimentar para dar uma indicação — não substitui exame oftalmológico.</p>
+
+      <div id="vision-test" class="test-card">
+        <p>Leia a letra exibida e digite-a. A letra ficará cada vez menor.</p>
+        <div id="vision-letter" class="vision-letter">E</div>
+        <div class="form-grid">
+          <input id="vision-input" type="text" maxlength="2" placeholder="Digite a letra" />
+          <button id="vision-check">Enviar</button>
+          <button id="vision-start">Iniciar teste</button>
+        </div>
+        <p id="vision-feedback" class="result"></p>
+      </div>
+
+      <p class="note">Se tiver dúvidas sobre sua visão ou o teste apontar problemas, consulte um oftalmologista.</p>
+    </section>
+
+    <section id="audicao" class="card">
+      <h2>Audição — Teste de tons</h2>
+      <p>Teste simples com tons em frequências diferentes. Use fones em ambiente silencioso para melhores resultados.</p>
+
+      <div id="hearing-test" class="test-card">
+        <div class="form-grid">
+          <label for="ht-volume">Volume aparente (0 a 1)</label>
+          <input id="ht-volume" type="range" min="0" max="1" step="0.05" value="0.5" />
+          <label for="ht-frequency">Frequência (Hz)</label>
+          <select id="ht-frequency">
+            <option value="250">250 Hz</option>
+            <option value="500">500 Hz</option>
+            <option value="1000" selected>1000 Hz</option>
+            <option value="2000">2000 Hz</option>
+            <option value="4000">4000 Hz</option>
+          </select>
+        </div>
+        <div class="form-grid">
+          <button id="ht-play">Tocar tom</button>
+          <button id="ht-heard">Ouviu</button>
+          <button id="ht-reset">Resetar</button>
+        </div>
+        <p id="ht-feedback" class="result"></p>
+      </div>
+
+      <p class="note">Este teste é indicativo. Para diagnóstico de perda auditiva, faça um exame audiológico profissional.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Saúde e Mobilidade — Conteúdo informativo. Não substitui orientação profissional.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
